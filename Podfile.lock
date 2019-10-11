@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.9.0)
+  - Nimble (8.0.4)
+  - Quick (2.2.0)
+  - Siesta (1.4.3):
+    - Siesta/Core (= 1.4.3)
+  - Siesta/Alamofire (1.4.3):
+    - Alamofire (> 4.1)
+    - Siesta/Core
+  - Siesta/Core (1.4.3)
+  - Siesta/UI (1.4.3):
+    - Siesta/Core
+
+DEPENDENCIES:
+  - Nimble (~> 8.0.0)
+  - Quick (~> 2.2.0)
+  - Siesta (~> 1.0)
+  - Siesta/Alamofire (~> 1.0)
+  - Siesta/UI (~> 1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Nimble
+    - Quick
+    - Siesta
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  Siesta: 83795fdf6a43232d1d2909e1a3dfb92ab5916d26
+
+PODFILE CHECKSUM: ae97b1c3bcae74dd15e05fb759432ef4a78476e4
+
+COCOAPODS: 1.5.3
