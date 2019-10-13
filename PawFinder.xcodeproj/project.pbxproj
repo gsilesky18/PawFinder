@@ -14,13 +14,15 @@
 		D721494C23512EC1002EE87F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D721494A23512EC1002EE87F /* Main.storyboard */; };
 		D721494E23512EC3002EE87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D721494D23512EC3002EE87F /* Assets.xcassets */; };
 		D721495123512EC3002EE87F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D721494F23512EC3002EE87F /* LaunchScreen.storyboard */; };
-		D721495C23512EC3002EE87F /* PawFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721495B23512EC3002EE87F /* PawFinderTests.swift */; };
 		D721496723512EC3002EE87F /* PawFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721496623512EC3002EE87F /* PawFinderUITests.swift */; };
 		D7904EC22351360900FA2A2C /* PetFinderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7904EC12351360900FA2A2C /* PetFinderApi.swift */; };
 		D7904EC52351504000FA2A2C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7904EC42351504000FA2A2C /* MainViewController.swift */; };
 		D7904EC72351505100FA2A2C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7904EC62351505100FA2A2C /* DetailViewController.swift */; };
 		D7904ECA23515C4D00FA2A2C /* AccessTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7904EC923515C4D00FA2A2C /* AccessTokenResponse.swift */; };
 		D7904ECC23515DB900FA2A2C /* GetAnimalsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7904ECB23515DB900FA2A2C /* GetAnimalsResponse.swift */; };
+		D7904ECF2352411D00FA2A2C /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7904ECE2352411D00FA2A2C /* AnimalTableViewCell.swift */; };
+		D7904ED323524C4400FA2A2C /* Dogs10.json in Resources */ = {isa = PBXBuildFile; fileRef = D7904ED223524C4400FA2A2C /* Dogs10.json */; };
+		D7904EDA23524ECE00FA2A2C /* MainViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7904ED923524ECE00FA2A2C /* MainViewControllerSpec.swift */; };
 		DB38C000460FFE8A115FA7EA /* Pods_PawFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C124518DD54CEBADB14368E8 /* Pods_PawFinder.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +51,7 @@
 		A10FF661EA6D7B46579211ED /* Pods-PawFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PawFinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PawFinderUITests/Pods-PawFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C124518DD54CEBADB14368E8 /* Pods_PawFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PawFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8BA71411CCF419539C9F54 /* Pods-PawFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PawFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-PawFinder/Pods-PawFinder.release.xcconfig"; sourceTree = "<group>"; };
-		D721494123512EC1002EE87F /* PawFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D721494123512EC1002EE87F /* Paw Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paw Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D721494423512EC1002EE87F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D721494623512EC1002EE87F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D721494B23512EC1002EE87F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,7 +59,6 @@
 		D721495023512EC3002EE87F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D721495223512EC3002EE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D721495723512EC3002EE87F /* PawFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D721495B23512EC3002EE87F /* PawFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawFinderTests.swift; sourceTree = "<group>"; };
 		D721495D23512EC3002EE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D721496223512EC3002EE87F /* PawFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D721496623512EC3002EE87F /* PawFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawFinderUITests.swift; sourceTree = "<group>"; };
@@ -67,6 +68,9 @@
 		D7904EC62351505100FA2A2C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D7904EC923515C4D00FA2A2C /* AccessTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenResponse.swift; sourceTree = "<group>"; };
 		D7904ECB23515DB900FA2A2C /* GetAnimalsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAnimalsResponse.swift; sourceTree = "<group>"; };
+		D7904ECE2352411D00FA2A2C /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
+		D7904ED223524C4400FA2A2C /* Dogs10.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Dogs10.json; sourceTree = "<group>"; };
+		D7904ED923524ECE00FA2A2C /* MainViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerSpec.swift; sourceTree = "<group>"; };
 		D8653CFA63255DE3C36CA1B0 /* Pods-PawFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PawFinderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PawFinderUITests/Pods-PawFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ED3523066DDCA6E99C044911 /* Pods-PawFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PawFinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PawFinderTests/Pods-PawFinderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +141,7 @@
 		D721494223512EC1002EE87F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D721494123512EC1002EE87F /* PawFinder.app */,
+				D721494123512EC1002EE87F /* Paw Finder.app */,
 				D721495723512EC3002EE87F /* PawFinderTests.xctest */,
 				D721496223512EC3002EE87F /* PawFinderUITests.xctest */,
 			);
@@ -147,15 +151,15 @@
 		D721494323512EC1002EE87F /* PawFinder */ = {
 			isa = PBXGroup;
 			children = (
-				D7904EC823515C3700FA2A2C /* Models */,
-				D7904EC32351501700FA2A2C /* ViewControllers */,
-				D7904EC0235135D200FA2A2C /* Services */,
 				D721494423512EC1002EE87F /* AppDelegate.swift */,
-				D721494623512EC1002EE87F /* SceneDelegate.swift */,
-				D721494A23512EC1002EE87F /* Main.storyboard */,
 				D721494D23512EC3002EE87F /* Assets.xcassets */,
-				D721494F23512EC3002EE87F /* LaunchScreen.storyboard */,
 				D721495223512EC3002EE87F /* Info.plist */,
+				D721494F23512EC3002EE87F /* LaunchScreen.storyboard */,
+				D721494A23512EC1002EE87F /* Main.storyboard */,
+				D7904EC823515C3700FA2A2C /* Models */,
+				D721494623512EC1002EE87F /* SceneDelegate.swift */,
+				D7904EC0235135D200FA2A2C /* Services */,
+				D7904EC32351501700FA2A2C /* ViewControllers */,
 			);
 			path = PawFinder;
 			sourceTree = "<group>";
@@ -163,7 +167,8 @@
 		D721495A23512EC3002EE87F /* PawFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				D721495B23512EC3002EE87F /* PawFinderTests.swift */,
+				D7904ED123524C1300FA2A2C /* Data */,
+				D7904ED023524B0200FA2A2C /* ViewControllerSpecs */,
 				D721495D23512EC3002EE87F /* Info.plist */,
 			);
 			path = PawFinderTests;
@@ -189,8 +194,9 @@
 		D7904EC32351501700FA2A2C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D7904EC42351504000FA2A2C /* MainViewController.swift */,
+				D7904ECD235240EF00FA2A2C /* Cells */,
 				D7904EC62351505100FA2A2C /* DetailViewController.swift */,
+				D7904EC42351504000FA2A2C /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +208,30 @@
 				D7904ECB23515DB900FA2A2C /* GetAnimalsResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D7904ECD235240EF00FA2A2C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D7904ECE2352411D00FA2A2C /* AnimalTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D7904ED023524B0200FA2A2C /* ViewControllerSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				D7904ED923524ECE00FA2A2C /* MainViewControllerSpec.swift */,
+			);
+			path = ViewControllerSpecs;
+			sourceTree = "<group>";
+		};
+		D7904ED123524C1300FA2A2C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D7904ED223524C4400FA2A2C /* Dogs10.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +253,7 @@
 			);
 			name = PawFinder;
 			productName = PawFinder;
-			productReference = D721494123512EC1002EE87F /* PawFinder.app */;
+			productReference = D721494123512EC1002EE87F /* Paw Finder.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D721495623512EC3002EE87F /* PawFinderTests */ = {
@@ -323,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7904ED323524C4400FA2A2C /* Dogs10.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7904ECA23515C4D00FA2A2C /* AccessTokenResponse.swift in Sources */,
+				D7904ECF2352411D00FA2A2C /* AnimalTableViewCell.swift in Sources */,
 				D7904ECC23515DB900FA2A2C /* GetAnimalsResponse.swift in Sources */,
 				D7904EC22351360900FA2A2C /* PetFinderApi.swift in Sources */,
 				D721494523512EC1002EE87F /* AppDelegate.swift in Sources */,
@@ -471,7 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D721495C23512EC3002EE87F /* PawFinderTests.swift in Sources */,
+				D7904EDA23524ECE00FA2A2C /* MainViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,7 +677,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanysocksapps.PawFinder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Paw Finder";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -664,7 +696,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanysocksapps.PawFinder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Paw Finder";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -689,7 +721,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PawFinder.app/PawFinder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paw Finder.app/Paw Finder";
 			};
 			name = Debug;
 		};
@@ -712,7 +744,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PawFinder.app/PawFinder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paw Finder.app/Paw Finder";
 			};
 			name = Release;
 		};

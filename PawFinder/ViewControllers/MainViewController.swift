@@ -11,6 +11,8 @@ import Siesta
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     //Loading indicator
     var statusOverlay = ResourceStatusOverlay()
     
@@ -21,7 +23,12 @@ class MainViewController: UIViewController {
             oldValue?.cancelLoadIfUnobserved(afterDelay: 0.1)
 
             aminalResource?.addObserver(self).addObserver(statusOverlay, owner: self).loadIfNeeded()
-
+        }
+    }
+    
+    var animals: [Animal] = []{
+        didSet{
+            tableView.reloadData()
         }
     }
 
@@ -35,32 +42,56 @@ class MainViewController: UIViewController {
         aminalResource = PetFinderApi.sharedInstance.getAnimals()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        aminalResource?.loadIfNeeded()
+    }
+    
     override func viewDidLayoutSubviews() {
         //Set overlay to cover view
         statusOverlay.positionToCover(view.bounds, inView: view)
     }
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
+}
+
+// MARK: - UITableViewDataSource
+extension MainViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return animals.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AnimalTableViewCell.kAnimalTableViewCell, for: indexPath) as? AnimalTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.animal = animals[indexPath.row]
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension MainViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 // MARK: - Resource observer
 extension MainViewController: ResourceObserver {
     
-    //Observer for when the resource status changes
+    //Observer for when the resource state changes
     func resourceChanged(_ resource: Resource, event: ResourceEvent) {
         
         if let response : GetAnimalsResponse = resource.typedContent() {
-            print(response)
+            animals = response.animals
         }
     }
 }

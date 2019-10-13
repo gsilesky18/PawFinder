@@ -1,0 +1,758 @@
+{
+    "animals": [
+        {
+            "id": 46258506,
+            "organization_id": "MN468",
+            "url": "https://www.petfinder.com/dog/china-46258506/mn/minneapolis/mattys-heart-and-soul-animal-rescue-mn468/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+            "type": "Dog",
+            "species": "Dog",
+            "breeds": {
+                "primary": "Terrier",
+                "secondary": "Pointer",
+                "mixed": true,
+                "unknown": false
+            },
+            "colors": {
+                "primary": null,
+                "secondary": null,
+                "tertiary": null
+            },
+            "age": "Baby",
+            "gender": "Female",
+            "size": "Medium",
+            "coat": null,
+            "attributes": {
+                "spayed_neutered": true,
+                "house_trained": false,
+                "declawed": null,
+                "special_needs": false,
+                "shots_current": true
+            },
+            "environment": {
+                "children": true,
+                "dogs": true,
+                "cats": true
+            },
+            "tags": [],
+            "name": "China",
+            "description": "You can fill out an adoption application online on our official website.China was an owner dump with her 8 siblings...",
+            "photos": [
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/1/?bust=1570913069&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/1/?bust=1570913069&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/1/?bust=1570913069&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/1/?bust=1570913069"
+                },
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/3/?bust=1570913069&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/3/?bust=1570913069&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/3/?bust=1570913069&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/3/?bust=1570913069"
+                },
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/2/?bust=1570913069&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/2/?bust=1570913069&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/2/?bust=1570913069&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/2/?bust=1570913069"
+                }
+            ],
+            "status": "adopted",
+            "status_changed_at": "2019-10-12T20:39:26+0000",
+            "published_at": "2019-10-12T20:39:26+0000",
+            "distance": 14.0653,
+            "contact": {
+                "email": "foster.mattysheartandsoul@gmail.com",
+                "phone": null,
+                "address": {
+                    "address1": null,
+                    "address2": null,
+                    "city": "Minneapolis",
+                    "state": "MN",
+                    "postcode": "55412",
+                    "country": "US"
+                }
+            },
+            "_links": {
+                "self": {
+                    "href": "/v2/animals/46258506"
+                },
+                "type": {
+                    "href": "/v2/types/dog"
+                },
+                "organization": {
+                    "href": "/v2/organizations/mn468"
+                }
+            }
+        },
+        {
+            "id": 46258370,
+            "organization_id": "MN210",
+            "url": "https://www.petfinder.com/dog/suga-puppy-46258370/mn/minneapolis/puppy-rescue-of-minnesota-mn210/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+            "type": "Dog",
+            "species": "Dog",
+            "breeds": {
+                "primary": "German Shepherd Dog",
+                "secondary": "Border Collie",
+                "mixed": true,
+                "unknown": false
+            },
+            "colors": {
+                "primary": null,
+                "secondary": null,
+                "tertiary": null
+            },
+            "age": "Baby",
+            "gender": "Male",
+            "size": "Medium",
+            "coat": null,
+            "attributes": {
+                "spayed_neutered": false,
+                "house_trained": false,
+                "declawed": null,
+                "special_needs": false,
+                "shots_current": false
+            },
+            "environment": {
+                "children": true,
+                "dogs": true,
+                "cats": true
+            },
+            "tags": [],
+            "name": "Suga Puppy",
+            "description": "You can fill out an adoption application online on our official website.\n\n\n\nAdoption Fee $450 plus taxThis litter of pups...",
+            "photos": [
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258370/1/?bust=1570912145&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258370/1/?bust=1570912145&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258370/1/?bust=1570912145&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258370/1/?bust=1570912145"
+                },
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258370/2/?bust=1570912144&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258370/2/?bust=1570912144&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258370/2/?bust=1570912144&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258370/2/?bust=1570912144"
+                }
+            ],
+            "status": "adoptable",
+            "status_changed_at": "2019-10-12T20:10:08+0000",
+            "published_at": "2019-10-12T20:10:08+0000",
+            "distance": 16.4604,
+            "contact": {
+                "email": "puppyrescueofmn@gmail.com",
+                "phone": null,
+                "address": {
+                    "address1": null,
+                    "address2": null,
+                    "city": "Minneapolis",
+                    "state": "MN",
+                    "postcode": "55429",
+                    "country": "US"
+                }
+            },
+            "_links": {
+                "self": {
+                    "href": "/v2/animals/46258370"
+                },
+                "type": {
+                    "href": "/v2/types/dog"
+                },
+                "organization": {
+                    "href": "/v2/organizations/mn210"
+                }
+            }
+        },
+        {
+            "id": 46258187,
+            "organization_id": "MN438",
+            "url": "https://www.petfinder.com/dog/sven-46258187/mn/hastings/emotional-rescue-mn438/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+            "type": "Dog",
+            "species": "Dog",
+            "breeds": {
+                "primary": "Labrador Retriever",
+                "secondary": null,
+                "mixed": false,
+                "unknown": false
+            },
+            "colors": {
+                "primary": "Black",
+                "secondary": null,
+                "tertiary": null
+            },
+            "age": "Senior",
+            "gender": "Male",
+            "size": "Large",
+            "coat": "Short",
+            "attributes": {
+                "spayed_neutered": true,
+                "house_trained": true,
+                "declawed": null,
+                "special_needs": false,
+                "shots_current": true
+            },
+            "environment": {
+                "children": true,
+                "dogs": true,
+                "cats": null
+            },
+            "tags": [],
+            "name": "Sven",
+            "description": "Good With Dogs: Yes\nGood With Cats: Unknown\nGood With Kids: Yes\nKennel Trained: Yes\nExercise Needs: Minimal\nGrooming: Minimal...",
+            "photos": [
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/2/?bust=1570909641&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/2/?bust=1570909641&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/2/?bust=1570909641&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/2/?bust=1570909641"
+                },
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/1/?bust=1570909638&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/1/?bust=1570909638&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/1/?bust=1570909638&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/1/?bust=1570909638"
+                },
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/3/?bust=1570909642&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/3/?bust=1570909642&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/3/?bust=1570909642&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258187/3/?bust=1570909642"
+                }
+            ],
+            "status": "adoptable",
+            "status_changed_at": "2019-10-12T20:07:04+0000",
+            "published_at": "2019-10-12T20:07:04+0000",
+            "distance": 24.2377,
+            "contact": {
+                "email": "emotional.rescue1@outlook.com",
+                "phone": "(320) 400-3647",
+                "address": {
+                    "address1": "PO Box 521",
+                    "address2": null,
+                    "city": "Hastings",
+                    "state": "MN",
+                    "postcode": "55033",
+                    "country": "US"
+                }
+            },
+            "_links": {
+                "self": {
+                    "href": "/v2/animals/46258187"
+                },
+                "type": {
+                    "href": "/v2/types/dog"
+                },
+                "organization": {
+                    "href": "/v2/organizations/mn438"
+                }
+            }
+        },
+        {
+            "id": 46258238,
+            "organization_id": "MN468",
+            "url": "https://www.petfinder.com/dog/kota-46258238/mn/minneapolis/mattys-heart-and-soul-animal-rescue-mn468/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+            "type": "Dog",
+            "species": "Dog",
+            "breeds": {
+                "primary": "Husky",
+                "secondary": "Great Pyrenees",
+                "mixed": true,
+                "unknown": false
+            },
+            "colors": {
+                "primary": null,
+                "secondary": null,
+                "tertiary": null
+            },
+            "age": "Baby",
+            "gender": "Female",
+            "size": "Large",
+            "coat": null,
+            "attributes": {
+                "spayed_neutered": true,
+                "house_trained": false,
+                "declawed": null,
+                "special_needs": false,
+                "shots_current": true
+            },
+            "environment": {
+                "children": true,
+                "dogs": true,
+                "cats": true
+            },
+            "tags": [],
+            "name": "Kota",
+            "description": "You can fill out an adoption application online on our official website.Kota is absolutely stunning and soft and oh, so...",
+            "photos": [],
+            "status": "adoptable",
+            "status_changed_at": "2019-10-12T19:53:58+0000",
+            "published_at": "2019-10-12T19:53:58+0000",
+            "distance": 14.0653,
+            "contact": {
+                "email": "foster.mattysheartandsoul@gmail.com",
+                "phone": null,
+                "address": {
+                    "address1": null,
+                    "address2": null,
+                    "city": "Minneapolis",
+                    "state": "MN",
+                    "postcode": "55412",
+                    "country": "US"
+                }
+            },
+            "_links": {
+                "self": {
+                    "href": "/v2/animals/46258238"
+                },
+                "type": {
+                    "href": "/v2/types/dog"
+                },
+                "organization": {
+                    "href": "/v2/organizations/mn468"
+                }
+            }
+        },
+        {
+            "id": 46257927,
+            "organization_id": "MN468",
+            "url": "https://www.petfinder.com/dog/onyx-46257927/mn/minneapolis/mattys-heart-and-soul-animal-rescue-mn468/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+            "type": "Dog",
+            "species": "Dog",
+            "breeds": {
+                "primary": "Labrador Retriever",
+                "secondary": null,
+                "mixed": true,
+                "unknown": false
+            },
+            "colors": {
+                "primary": null,
+                "secondary": null,
+                "tertiary": null
+            },
+            "age": "Baby",
+            "gender": "Female",
+            "size": "Medium",
+            "coat": null,
+            "attributes": {
+                "spayed_neutered": true,
+                "house_trained": false,
+                "declawed": null,
+                "special_needs": false,
+                "shots_current": true
+            },
+            "environment": {
+                "children": true,
+                "dogs": true,
+                "cats": true
+            },
+            "tags": [],
+            "name": "Onyx",
+            "description": "You can fill out an adoption application online on our official website.Onyx is a stunning Lab puppy. She was found...",
+            "photos": [
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257927/1/?bust=1570909442&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257927/1/?bust=1570909442&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257927/1/?bust=1570909442&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257927/1/?bust=1570909442"
+                }
+            ],
+            "status": "adoptable",
+            "status_changed_at": "2019-10-12T19:23:47+0000",
+            "published_at": "2019-10-12T19:23:47+0000",
+            "distance": 14.0653,
+            "contact": {
+                "email": "foster.mattysheartandsoul@gmail.com",
+                "phone": null,
+                "address": {
+                    "address1": null,
+                    "address2": null,
+                    "city": "Minneapolis",
+                    "state": "MN",
+                    "postcode": "55412",
+                    "country": "US"
+                }
+            },
+            "_links": {
+                "self": {
+                    "href": "/v2/animals/46257927"
+                },
+                "type": {
+                    "href": "/v2/types/dog"
+                },
+                "organization": {
+                    "href": "/v2/organizations/mn468"
+                }
+            }
+        },
+        {
+            "id": 46257766,
+            "organization_id": "MN426",
+            "url": "https://www.petfinder.com/dog/sees-46257766/mn/st-paul/animal-humane-society-st-paul-mn426/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+            "type": "Dog",
+            "species": "Dog",
+            "breeds": {
+                "primary": "Cattle Dog",
+                "secondary": "Mixed Breed",
+                "mixed": true,
+                "unknown": false
+            },
+            "colors": {
+                "primary": null,
+                "secondary": null,
+                "tertiary": null
+            },
+            "age": "Young",
+            "gender": "Male",
+            "size": "Medium",
+            "coat": null,
+            "attributes": {
+                "spayed_neutered": false,
+                "house_trained": false,
+                "declawed": null,
+                "special_needs": false,
+                "shots_current": false
+            },
+            "environment": {
+                "children": true,
+                "dogs": true,
+                "cats": true
+            },
+            "tags": [],
+            "name": "Sees",
+            "description": null,
+            "photos": [
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257766/1/?bust=1570907490&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257766/1/?bust=1570907490&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257766/1/?bust=1570907490&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257766/1/?bust=1570907490"
+                }
+            ],
+            "status": "adoptable",
+            "status_changed_at": "2019-10-12T19:06:16+0000",
+            "published_at": "2019-10-12T19:06:16+0000",
+            "distance": 13.7238,
+            "contact": {
+                "email": "info@animalhumanesociety.org",
+                "phone": "(651) 645-7387",
+                "address": {
+                    "address1": "1115 Beulah Lane",
+                    "address2": null,
+                    "city": "St Paul",
+                    "state": "MN",
+                    "postcode": "55108",
+                    "country": "US"
+                }
+            },
+            "_links": {
+                "self": {
+                    "href": "/v2/animals/46257766"
+                },
+                "type": {
+                    "href": "/v2/types/dog"
+                },
+                "organization": {
+                    "href": "/v2/organizations/mn426"
+                }
+            }
+        },
+        {
+            "id": 46257759,
+            "organization_id": "MN426",
+            "url": "https://www.petfinder.com/dog/jake-46257759/mn/st-paul/animal-humane-society-st-paul-mn426/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+            "type": "Dog",
+            "species": "Dog",
+            "breeds": {
+                "primary": "Labrador Retriever",
+                "secondary": "Terrier",
+                "mixed": true,
+                "unknown": false
+            },
+            "colors": {
+                "primary": null,
+                "secondary": null,
+                "tertiary": null
+            },
+            "age": "Young",
+            "gender": "Male",
+            "size": "Large",
+            "coat": null,
+            "attributes": {
+                "spayed_neutered": false,
+                "house_trained": false,
+                "declawed": null,
+                "special_needs": false,
+                "shots_current": false
+            },
+            "environment": {
+                "children": true,
+                "dogs": true,
+                "cats": true
+            },
+            "tags": [],
+            "name": "Jake",
+            "description": null,
+            "photos": [
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257759/1/?bust=1570907490&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257759/1/?bust=1570907490&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257759/1/?bust=1570907490&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257759/1/?bust=1570907490"
+                }
+            ],
+            "status": "adoptable",
+            "status_changed_at": "2019-10-12T19:06:16+0000",
+            "published_at": "2019-10-12T19:06:16+0000",
+            "distance": 13.7238,
+            "contact": {
+                "email": "info@animalhumanesociety.org",
+                "phone": "(651) 645-7387",
+                "address": {
+                    "address1": "1115 Beulah Lane",
+                    "address2": null,
+                    "city": "St Paul",
+                    "state": "MN",
+                    "postcode": "55108",
+                    "country": "US"
+                }
+            },
+            "_links": {
+                "self": {
+                    "href": "/v2/animals/46257759"
+                },
+                "type": {
+                    "href": "/v2/types/dog"
+                },
+                "organization": {
+                    "href": "/v2/organizations/mn426"
+                }
+            }
+        },
+        {
+            "id": 46257761,
+            "organization_id": "MN426",
+            "url": "https://www.petfinder.com/dog/mary-ann-46257761/mn/st-paul/animal-humane-society-st-paul-mn426/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+            "type": "Dog",
+            "species": "Dog",
+            "breeds": {
+                "primary": "Terrier",
+                "secondary": "Mixed Breed",
+                "mixed": true,
+                "unknown": false
+            },
+            "colors": {
+                "primary": null,
+                "secondary": null,
+                "tertiary": null
+            },
+            "age": "Young",
+            "gender": "Female",
+            "size": "Medium",
+            "coat": null,
+            "attributes": {
+                "spayed_neutered": false,
+                "house_trained": false,
+                "declawed": null,
+                "special_needs": false,
+                "shots_current": false
+            },
+            "environment": {
+                "children": true,
+                "dogs": true,
+                "cats": true
+            },
+            "tags": [],
+            "name": "Mary Ann",
+            "description": null,
+            "photos": [
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257761/1/?bust=1570907487&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257761/1/?bust=1570907487&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257761/1/?bust=1570907487&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257761/1/?bust=1570907487"
+                }
+            ],
+            "status": "adoptable",
+            "status_changed_at": "2019-10-12T19:06:16+0000",
+            "published_at": "2019-10-12T19:06:16+0000",
+            "distance": 13.7238,
+            "contact": {
+                "email": "info@animalhumanesociety.org",
+                "phone": "(651) 645-7387",
+                "address": {
+                    "address1": "1115 Beulah Lane",
+                    "address2": null,
+                    "city": "St Paul",
+                    "state": "MN",
+                    "postcode": "55108",
+                    "country": "US"
+                }
+            },
+            "_links": {
+                "self": {
+                    "href": "/v2/animals/46257761"
+                },
+                "type": {
+                    "href": "/v2/types/dog"
+                },
+                "organization": {
+                    "href": "/v2/organizations/mn426"
+                }
+            }
+        },
+        {
+            "id": 46257763,
+            "organization_id": "MN426",
+            "url": "https://www.petfinder.com/dog/martina-46257763/mn/st-paul/animal-humane-society-st-paul-mn426/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+            "type": "Dog",
+            "species": "Dog",
+            "breeds": {
+                "primary": "Pug",
+                "secondary": "Mixed Breed",
+                "mixed": true,
+                "unknown": false
+            },
+            "colors": {
+                "primary": null,
+                "secondary": null,
+                "tertiary": null
+            },
+            "age": "Young",
+            "gender": "Female",
+            "size": "Small",
+            "coat": null,
+            "attributes": {
+                "spayed_neutered": false,
+                "house_trained": false,
+                "declawed": null,
+                "special_needs": false,
+                "shots_current": false
+            },
+            "environment": {
+                "children": true,
+                "dogs": true,
+                "cats": true
+            },
+            "tags": [],
+            "name": "Martina",
+            "description": null,
+            "photos": [
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257763/1/?bust=1570907488&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257763/1/?bust=1570907488&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257763/1/?bust=1570907488&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257763/1/?bust=1570907488"
+                }
+            ],
+            "status": "adoptable",
+            "status_changed_at": "2019-10-12T19:06:16+0000",
+            "published_at": "2019-10-12T19:06:16+0000",
+            "distance": 13.7238,
+            "contact": {
+                "email": "info@animalhumanesociety.org",
+                "phone": "(651) 645-7387",
+                "address": {
+                    "address1": "1115 Beulah Lane",
+                    "address2": null,
+                    "city": "St Paul",
+                    "state": "MN",
+                    "postcode": "55108",
+                    "country": "US"
+                }
+            },
+            "_links": {
+                "self": {
+                    "href": "/v2/animals/46257763"
+                },
+                "type": {
+                    "href": "/v2/types/dog"
+                },
+                "organization": {
+                    "href": "/v2/organizations/mn426"
+                }
+            }
+        },
+        {
+            "id": 46257765,
+            "organization_id": "MN426",
+            "url": "https://www.petfinder.com/dog/ellie-46257765/mn/st-paul/animal-humane-society-st-paul-mn426/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+            "type": "Dog",
+            "species": "Dog",
+            "breeds": {
+                "primary": "Terrier",
+                "secondary": "Mixed Breed",
+                "mixed": true,
+                "unknown": false
+            },
+            "colors": {
+                "primary": null,
+                "secondary": null,
+                "tertiary": null
+            },
+            "age": "Young",
+            "gender": "Female",
+            "size": "Large",
+            "coat": null,
+            "attributes": {
+                "spayed_neutered": false,
+                "house_trained": false,
+                "declawed": null,
+                "special_needs": false,
+                "shots_current": false
+            },
+            "environment": {
+                "children": true,
+                "dogs": true,
+                "cats": true
+            },
+            "tags": [],
+            "name": "Ellie",
+            "description": null,
+            "photos": [
+                {
+                    "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257765/1/?bust=1570907485&width=100",
+                    "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257765/1/?bust=1570907485&width=300",
+                    "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257765/1/?bust=1570907485&width=600",
+                    "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257765/1/?bust=1570907485"
+                }
+            ],
+            "status": "adoptable",
+            "status_changed_at": "2019-10-12T19:06:16+0000",
+            "published_at": "2019-10-12T19:06:16+0000",
+            "distance": 13.7238,
+            "contact": {
+                "email": "info@animalhumanesociety.org",
+                "phone": "(651) 645-7387",
+                "address": {
+                    "address1": "1115 Beulah Lane",
+                    "address2": null,
+                    "city": "St Paul",
+                    "state": "MN",
+                    "postcode": "55108",
+                    "country": "US"
+                }
+            },
+            "_links": {
+                "self": {
+                    "href": "/v2/animals/46257765"
+                },
+                "type": {
+                    "href": "/v2/types/dog"
+                },
+                "organization": {
+                    "href": "/v2/organizations/mn426"
+                }
+            }
+        }
+    ],
+    "pagination": {
+        "count_per_page": 10,
+        "total_count": 77597,
+        "current_page": 1,
+        "total_pages": 7760,
+        "_links": {
+            "next": {
+                "href": "/v2/animals?limit=10&location=55437&type=dog&page=2"
+            }
+        }
+    }
+}
