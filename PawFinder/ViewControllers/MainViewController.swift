@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
         }
     }
     
+    //Array of animals
     var animals: [Animal] = []{
         didSet{
             tableView.reloadData()
@@ -56,6 +57,12 @@ class MainViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToDetail"{
+            if let vc = segue.destination as? DetailTableViewController, let cell = sender as? AnimalTableViewCell {
+                //Pass selected animal to detail view controller
+                vc.animal = cell.animal
+            }
+        }
     }
 
 }

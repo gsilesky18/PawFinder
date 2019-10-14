@@ -1,0 +1,84 @@
+{
+    "id": 46258506,
+    "organization_id": "MN468",
+    "url": "https://www.petfinder.com/dog/china-46258506/mn/minneapolis/mattys-heart-and-soul-animal-rescue-mn468/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+    "type": "Dog",
+    "species": "Dog",
+    "breeds": {
+        "primary": "Terrier",
+        "secondary": null,
+        "mixed": false,
+        "unknown": false
+    },
+    "colors": {
+        "primary": null,
+        "secondary": null,
+        "tertiary": null
+    },
+    "age": "Baby",
+    "gender": "Female",
+    "size": "Medium",
+    "coat": null,
+    "attributes": {
+        "spayed_neutered": true,
+        "house_trained": false,
+        "declawed": null,
+        "special_needs": false,
+        "shots_current": true
+    },
+    "environment": {
+        "children": true,
+        "dogs": true,
+        "cats": true
+    },
+    "tags": [],
+    "name": "China",
+    "description": "You can fill out an adoption application online on our official website.China was an owner dump with her 8 siblings...",
+    "photos": [
+        {
+            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/1/?bust=1570913069&width=100",
+            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/1/?bust=1570913069&width=300",
+            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/1/?bust=1570913069&width=600",
+            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/1/?bust=1570913069"
+        },
+        {
+            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/3/?bust=1570913069&width=100",
+            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/3/?bust=1570913069&width=300",
+            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/3/?bust=1570913069&width=600",
+            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/3/?bust=1570913069"
+        },
+        {
+            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/2/?bust=1570913069&width=100",
+            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/2/?bust=1570913069&width=300",
+            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/2/?bust=1570913069&width=600",
+            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46258506/2/?bust=1570913069"
+        }
+    ],
+    "status": "adopted",
+    "status_changed_at": "2019-10-12T20:39:26+0000",
+    "published_at": "2019-10-12T20:39:26+0000",
+    "distance": 14.0653,
+    "contact": {
+        "email": null,
+        "phone": "(651) 645-7387",
+        "address": {
+            "address1": null,
+            "address2": null,
+            "city": "Minneapolis",
+            "state": "MN",
+            "postcode": "55412",
+            "country": "US"
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "/v2/animals/46258506"
+        },
+        "type": {
+            "href": "/v2/types/dog"
+        },
+        "organization": {
+            "href": "/v2/organizations/mn468"
+        }
+    }
+}

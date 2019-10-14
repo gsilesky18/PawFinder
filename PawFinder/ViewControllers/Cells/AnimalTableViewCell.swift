@@ -26,7 +26,7 @@ class AnimalTableViewCell: UITableViewCell {
                     remoteImageView.imageURL = nil
                     remoteImageView.image = UIImage(named: "ComingSoon")
                 }
-                nameLabel.text = animal.name
+                nameLabel.text = animal.name.capitalized
                 if let primaryBreed = animal.breeds.primary {
                     ageAndBreedLabel.text = "\(animal.age) - \(primaryBreed)"
                 }else{

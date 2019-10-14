@@ -1,0 +1,65 @@
+{
+    "id": 46258238,
+    "organization_id": "MN468",
+    "url": "https://www.petfinder.com/dog/kota-46258238/mn/minneapolis/mattys-heart-and-soul-animal-rescue-mn468/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+    "type": "Dog",
+    "species": "Dog",
+    "breeds": {
+        "primary": "Husky",
+        "secondary": "Great Pyrenees",
+        "mixed": true,
+        "unknown": false
+    },
+    "colors": {
+        "primary": null,
+        "secondary": null,
+        "tertiary": null
+    },
+    "age": "Baby",
+    "gender": "Female",
+    "size": "Large",
+    "coat": "Long",
+    "attributes": {
+        "spayed_neutered": true,
+        "house_trained": false,
+        "declawed": null,
+        "special_needs": false,
+        "shots_current": true
+    },
+    "environment": {
+        "children": true,
+        "dogs": true,
+        "cats": true
+    },
+    "tags": [],
+    "name": "Kota",
+    "description": "You can fill out an adoption application online on our official website.Kota is absolutely stunning and soft and oh, so...",
+    "photos": [],
+    "status": "adoptable",
+    "status_changed_at": "2019-10-12T19:53:58+0000",
+    "published_at": "2019-10-12T19:53:58+0000",
+    "distance": 14.0653,
+    "contact": {
+        "email": "foster.mattysheartandsoul@gmail.com",
+        "phone": null,
+        "address": {
+            "address1": null,
+            "address2": null,
+            "city": "Minneapolis",
+            "state": "MN",
+            "postcode": "55412",
+            "country": "US"
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "/v2/animals/46258238"
+        },
+        "type": {
+            "href": "/v2/types/dog"
+        },
+        "organization": {
+            "href": "/v2/organizations/mn468"
+        }
+    }
+}

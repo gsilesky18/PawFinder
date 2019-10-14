@@ -1,0 +1,72 @@
+{
+    "id": 46257763,
+    "organization_id": "MN426",
+    "url": "https://www.petfinder.com/dog/martina-46257763/mn/st-paul/animal-humane-society-st-paul-mn426/?referrer_id=8fe0c977-864e-4a28-a5bc-bd1f870a4b6f",
+    "type": "Dog",
+    "species": "Dog",
+    "breeds": {
+        "primary": "Pug",
+        "secondary": "Mixed Breed",
+        "mixed": true,
+        "unknown": false
+    },
+    "colors": {
+        "primary": null,
+        "secondary": null,
+        "tertiary": null
+    },
+    "age": "Young",
+    "gender": "Female",
+    "size": "Small",
+    "coat": null,
+    "attributes": {
+        "spayed_neutered": false,
+        "house_trained": false,
+        "declawed": null,
+        "special_needs": false,
+        "shots_current": false
+    },
+    "environment": {
+        "children": true,
+        "dogs": true,
+        "cats": true
+    },
+    "tags": [],
+    "name": "Martina",
+    "description": null,
+    "photos": [
+        {
+            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257763/1/?bust=1570907488&width=100",
+            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257763/1/?bust=1570907488&width=300",
+            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257763/1/?bust=1570907488&width=600",
+            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/46257763/1/?bust=1570907488"
+        }
+    ],
+    "status": "adoptable",
+    "status_changed_at": "2019-10-12T19:06:16+0000",
+    "published_at": "2019-10-12T19:06:16+0000",
+    "distance": 13.7238,
+    "contact": {
+        "email": null,
+        "phone": null,
+        "address": {
+            "address1": "1115 Beulah Lane",
+            "address2": null,
+            "city": "St Paul",
+            "state": "MN",
+            "postcode": "55108",
+            "country": "US"
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "/v2/animals/46257763"
+        },
+        "type": {
+            "href": "/v2/types/dog"
+        },
+        "organization": {
+            "href": "/v2/organizations/mn426"
+        }
+    }
+}
