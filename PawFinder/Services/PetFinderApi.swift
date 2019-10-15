@@ -22,20 +22,22 @@ class PetFinderApi: Service {
     
     fileprivate init(){
         #if DEBUG
-        SiestaLog.Category.enabled = .common
+        //SiestaLog.Category.enabled = .common
         #endif
         //Siesta init
         super.init(baseURL: "https://api.petfinder.com/v2", standardTransformers: [.text, .image])
         
         //Config all request headers to include Bearer token
         configure("**") {
-          if let authToken = self.authToken {
-            $0.headers["Authorization"] =  "Bearer " + authToken         // Set the token header from a var that we can update
-          }
-          //Add decorator incase access token has expired
-          $0.decorateRequests {
-            self.refreshTokenOnAuthFailure(request: $1)
-          }
+            if let authToken = self.authToken {
+                $0.headers["Authorization"] =  "Bearer " + authToken         // Set the token header from a var that we can update
+            }
+            //Add decorator incase access token has expired
+            $0.decorateRequests {
+                self.refreshTokenOnAuthFailure(request: $1)
+            }
+            
+            $0.expirationTime = 3600
         }
         
         //Mapping from specific paths to models
@@ -88,8 +90,8 @@ class PetFinderApi: Service {
     /// Get resource for adoptable animals
     ///
     /// - Returns: Resource to load data
-    func getAnimals() -> Resource {
-        return resource("/animals").withParam("type", "dog")
+    func getAnimals(type: String, zip: Int, page: Int) -> Resource {
+        return resource("/animals").withParam("type", type).withParam("location", String(zip)).withParam("page", String(page))
     }
     
 }

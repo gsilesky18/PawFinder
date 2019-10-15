@@ -11,7 +11,9 @@ import Nimble
 @testable import Paw_Finder
 
 class MainViewControllerSpec: QuickSpec {
+    
     override func spec() {
+        
         var viewController: MainViewController!
         
         describe("MainViewControllerSpec"){
@@ -35,17 +37,22 @@ class MainViewControllerSpec: QuickSpec {
                     }
                 }
                 
-                context("when 10 animals are available"){
-                    it("should have 10 rows in the table view"){
+                context("when 100 animals are available"){
+                    it("should have 100 rows in the table view"){
                         //Arrange
                         let url = Bundle(for: type(of: self)).url(forResource: "Dogs10", withExtension: "json")!
                         let data = try! Data(contentsOf: url)
                         let jsonDecoder = JSONDecoder()
                         let response = try! jsonDecoder.decode(GetAnimalsResponse.self, from: data)
                         //Act
-                        viewController.animals = response.animals
+                        viewController.tableView.isHidden = false
+                        viewController.activityIndicator.stopAnimating()
+                        viewController.animals.append(contentsOf: response.animals)
+                        viewController.totalPages = response.pagination.total_pages
+                        viewController.totalAnimal = response.pagination.total_count
+                        viewController.tableView.reloadData()
                         //Asset
-                        expect(viewController.tableView.numberOfRows(inSection: 0)).toEventually(equal(10))
+                        expect(viewController.tableView.numberOfRows(inSection: 0)).toEventually(equal(100))
                     }
                 }
                 context("when animal is set in cell"){
@@ -56,7 +63,12 @@ class MainViewControllerSpec: QuickSpec {
                         let jsonDecoder = JSONDecoder()
                         let response = try! jsonDecoder.decode(GetAnimalsResponse.self, from: data)
                         //Act
-                        viewController.animals = response.animals
+                        viewController.tableView.isHidden = false
+                        viewController.activityIndicator.stopAnimating()
+                        viewController.animals.append(contentsOf: response.animals)
+                        viewController.totalPages = response.pagination.total_pages
+                        viewController.totalAnimal = response.pagination.total_count
+                        viewController.tableView.reloadData()
                         //Assert
                         let cell = viewController.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! AnimalTableViewCell
                         expect(cell.remoteImageView.imageURL).toEventuallyNot(beNil())
@@ -73,11 +85,41 @@ class MainViewControllerSpec: QuickSpec {
                         let jsonDecoder = JSONDecoder()
                         let response = try! jsonDecoder.decode(GetAnimalsResponse.self, from: data)
                         //Act
-                        viewController.animals = response.animals
+                        viewController.tableView.isHidden = false
+                        viewController.activityIndicator.stopAnimating()
+                        viewController.animals.append(contentsOf: response.animals)
+                        viewController.totalPages = response.pagination.total_pages
+                        viewController.totalAnimal = response.pagination.total_count
+                        viewController.tableView.reloadData()
                         //Assert
                         let cell = viewController.tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as! AnimalTableViewCell
                         expect(cell.remoteImageView.imageURL).toEventually(beNil())
                         expect(cell.remoteImageView.image).toEventually(equal(UIImage(named: "ComingSoon")))
+                    }
+                }
+                
+                context("when cell is loading"){
+                    it("should display activity indicator"){
+                        //Arrange
+                        let url = Bundle(for: type(of: self)).url(forResource: "Dogs10", withExtension: "json")!
+                        let data = try! Data(contentsOf: url)
+                        let jsonDecoder = JSONDecoder()
+                        let response = try! jsonDecoder.decode(GetAnimalsResponse.self, from: data)
+                        viewController.tableView.isHidden = false
+                        viewController.activityIndicator.stopAnimating()
+                        viewController.animals.append(contentsOf: response.animals)
+                        viewController.totalPages = response.pagination.total_pages
+                        viewController.totalAnimal = response.pagination.total_count
+                        viewController.tableView.reloadData()
+                        //Act
+                        viewController.tableView.scrollToRow(at: IndexPath(row: 30, section: 0), at: .middle, animated: false)
+                        viewController.aminalResource?.wipe()
+                        //Assert
+                        let cell = viewController.tableView.cellForRow(at: IndexPath(row: 30, section: 0)) as! AnimalTableViewCell
+                        expect(cell.activityIndicator.isHidden).toEventually(beFalse())
+                        expect(cell.remoteImageView.isHidden).toEventually(beTrue())
+                        expect(cell.nameLabel.isHidden).toEventually(beTrue())
+                        expect(cell.ageAndBreedLabel.isHidden).toEventually(beTrue())
                     }
                 }
             }

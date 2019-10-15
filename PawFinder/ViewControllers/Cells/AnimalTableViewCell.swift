@@ -16,10 +16,19 @@ class AnimalTableViewCell: UITableViewCell {
     @IBOutlet weak var remoteImageView: RemoteImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageAndBreedLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        animal = nil
+    }
     
     var animal: Animal? {
         didSet{
             if let animal = animal {
+                remoteImageView.isHidden = false
+                nameLabel.isHidden = false
+                ageAndBreedLabel.isHidden = false
                 if let photo = animal.photos.first {
                     remoteImageView.imageURL = photo.medium
                 }else{
@@ -32,7 +41,12 @@ class AnimalTableViewCell: UITableViewCell {
                 }else{
                     ageAndBreedLabel.text = "\(animal.age)"
                 }
-                
+                activityIndicator.stopAnimating()
+            }else{
+                remoteImageView.isHidden = true
+                nameLabel.isHidden = true
+                ageAndBreedLabel.isHidden = true
+                activityIndicator.startAnimating()
             }
         }
     }

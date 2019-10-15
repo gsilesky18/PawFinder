@@ -746,9 +746,9 @@
     ],
     "pagination": {
         "count_per_page": 10,
-        "total_count": 77597,
+        "total_count": 100,
         "current_page": 1,
-        "total_pages": 7760,
+        "total_pages": 10,
         "_links": {
             "next": {
                 "href": "/v2/animals?limit=10&location=55437&type=dog&page=2"

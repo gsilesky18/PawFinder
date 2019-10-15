@@ -26,12 +26,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pab-YU-hfN" customClass="RemoteImageView" customModule="Siesta">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pab-YU-hfN" customClass="RemoteImageView" customModule="Siesta">
                                                     <rect key="frame" x="16" y="8" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="pXu-VT-dyx"/>
                                                         <constraint firstAttribute="height" constant="100" id="zht-Wl-E1a"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="placeholderImage" value="ComingSoon"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a3L-ae-btj">
                                                     <rect key="frame" x="132" y="8" width="242" height="100"/>
@@ -57,9 +60,14 @@
                                                         <constraint firstAttribute="height" constant="16" id="F4u-19-GBV"/>
                                                     </constraints>
                                                 </imageView>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-4a-dUE">
+                                                    <rect key="frame" x="188.5" y="39.5" width="37" height="37"/>
+                                                    <color key="color" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Pab-YU-hfN" firstAttribute="centerY" secondItem="jkw-Fg-RvJ" secondAttribute="centerY" id="0FH-eT-nLG"/>
+                                                <constraint firstItem="v1b-4a-dUE" firstAttribute="centerY" secondItem="jkw-Fg-RvJ" secondAttribute="centerY" id="5PL-Oe-VMB"/>
                                                 <constraint firstAttribute="trailing" secondItem="QFT-8I-SKA" secondAttribute="trailing" constant="16" id="HAU-er-DLv"/>
                                                 <constraint firstItem="QFT-8I-SKA" firstAttribute="centerY" secondItem="jkw-Fg-RvJ" secondAttribute="centerY" id="NYm-2f-hND"/>
                                                 <constraint firstItem="QFT-8I-SKA" firstAttribute="leading" secondItem="a3L-ae-btj" secondAttribute="trailing" constant="8" id="OTX-aj-kZ4"/>
@@ -67,10 +75,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="a3L-ae-btj" secondAttribute="bottom" constant="8" id="fNk-BL-Eik"/>
                                                 <constraint firstItem="Pab-YU-hfN" firstAttribute="leading" secondItem="jkw-Fg-RvJ" secondAttribute="leading" constant="16" id="kcz-5x-JBZ"/>
                                                 <constraint firstItem="a3L-ae-btj" firstAttribute="leading" secondItem="Pab-YU-hfN" secondAttribute="trailing" constant="16" id="qrv-uX-TRZ"/>
+                                                <constraint firstItem="v1b-4a-dUE" firstAttribute="centerX" secondItem="jkw-Fg-RvJ" secondAttribute="centerX" id="vAa-zi-GP4"/>
                                                 <constraint firstItem="a3L-ae-btj" firstAttribute="top" secondItem="jkw-Fg-RvJ" secondAttribute="top" constant="8" id="wUa-TI-rm4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="v1b-4a-dUE" id="vtx-HC-5EE"/>
                                             <outlet property="ageAndBreedLabel" destination="x2T-o1-OFK" id="Y1T-ux-NUB"/>
                                             <outlet property="nameLabel" destination="6bx-0V-oBr" id="UBQ-sh-f1b"/>
                                             <outlet property="remoteImageView" destination="Pab-YU-hfN" id="H4T-Ra-L9K"/>
@@ -81,11 +91,18 @@
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="OLY-Fp-TUM"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="mGj-71-PzW"/>
+                                    <outlet property="prefetchDataSource" destination="BYZ-38-t0r" id="w1s-Vo-fpH"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9n4-Gf-SF5">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="9n4-Gf-SF5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4ac-tl-RKE"/>
+                            <constraint firstItem="9n4-Gf-SF5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A1z-E4-VRC"/>
                             <constraint firstItem="J2u-rb-Gnc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j3e-6V-o7A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J2u-rb-Gnc" secondAttribute="bottom" id="oIk-p6-eAQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J2u-rb-Gnc" secondAttribute="trailing" id="tF8-6d-ZA5"/>
@@ -97,6 +114,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="1nc-ZZ-7dg"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="9n4-Gf-SF5" id="qug-Jj-sI0"/>
                         <outlet property="tableView" destination="J2u-rb-Gnc" id="rpy-sY-2TJ"/>
                     </connections>
                 </viewController>
@@ -786,4 +804,7 @@
             <point key="canvasLocation" x="-312" y="172"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ComingSoon" width="400" height="400"/>
+    </resources>
 </document>

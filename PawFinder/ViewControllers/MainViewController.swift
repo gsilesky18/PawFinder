@@ -12,9 +12,7 @@ import Siesta
 class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    //Loading indicator
-    var statusOverlay = ResourceStatusOverlay()
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     //Resource used to retrieve data from PetFinder
     var aminalResource: Resource? {
@@ -22,36 +20,25 @@ class MainViewController: UIViewController {
             oldValue?.removeObservers(ownedBy: self)
             oldValue?.cancelLoadIfUnobserved(afterDelay: 0.1)
 
-            aminalResource?.addObserver(self).addObserver(statusOverlay, owner: self).loadIfNeeded()
+            aminalResource?.addObserver(self).loadIfNeeded()
         }
     }
     
     //Array of animals
-    var animals: [Animal] = []{
-        didSet{
-            tableView.reloadData()
-        }
-    }
+    var animals: [Animal] = []
+    var currentPage = 1
+    var currentCount = 0
+    var totalPages = 1
+    var totalAnimal = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //Setup Siesta overlay
-        statusOverlay.embed(in: self)
-        statusOverlay.displayPriority = [.loading, .anyData, .error]
-        
-        aminalResource = PetFinderApi.sharedInstance.getAnimals()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        aminalResource?.loadIfNeeded()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        //Set overlay to cover view
-        statusOverlay.positionToCover(view.bounds, inView: view)
-    }
+        //Update UI to show loading indicator
+        tableView.isHidden = true
+        activityIndicator.startAnimating()
+        //Initialize animal resource
+        updateResource()
+    }  
     
     // MARK: - Navigation
 
@@ -71,15 +58,30 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return animals.count
+        return totalAnimal
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AnimalTableViewCell.kAnimalTableViewCell, for: indexPath) as? AnimalTableViewCell else {
             return UITableViewCell()
         }
-        cell.animal = animals[indexPath.row]
+        if isLoadingCell(for: indexPath){
+            cell.animal = nil
+        }else{
+            cell.animal = animals[indexPath.row]
+        }
+        
         return cell
+    }
+}
+
+// MARK: - UITableViewDataSourcePrefetching
+extension MainViewController: UITableViewDataSourcePrefetching {
+
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        if indexPaths.contains(where: isLoadingCell){
+            updateResource()
+        }
     }
 }
 
@@ -96,9 +98,50 @@ extension MainViewController: ResourceObserver {
     
     //Observer for when the resource state changes
     func resourceChanged(_ resource: Resource, event: ResourceEvent) {
-        
-        if let response : GetAnimalsResponse = resource.typedContent() {
-            animals = response.animals
+        if case .newData = event {
+            if let response : GetAnimalsResponse = resource.typedContent() {
+                currentPage += 1
+                totalPages = response.pagination.total_pages
+                totalAnimal = response.pagination.total_count
+                animals.append(contentsOf: response.animals)
+                if response.pagination.current_page > 1 {
+                    //Get the section that was loaded
+                    let newIndexPathsToReload = calculateIndexPathsToReload(from: response.animals.count)
+                    //Check if cells are visible
+                    let indexPathsToReload = visibleIndexPathsToReload(intersecting: newIndexPathsToReload)
+                    tableView.reloadRows(at: indexPathsToReload, with: .automatic)
+                }else{
+                    //If first page then reload table view
+                    tableView.isHidden = false
+                    activityIndicator.stopAnimating()
+                    tableView.reloadData()
+                }
+            }
         }
+
     }
+}
+
+// MARK: - Private Methods
+private extension MainViewController {
+    func isLoadingCell(for indexPath: IndexPath) -> Bool{
+        return indexPath.row >= animals.count
+    }
+    
+    func updateResource(){
+        aminalResource = PetFinderApi.sharedInstance.getAnimals(type: "dog", zip: 55437, page: currentPage)
+    }
+    
+    func calculateIndexPathsToReload(from count: Int) -> [IndexPath] {
+      let startIndex = animals.count - count
+      let endIndex = startIndex + count
+      return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
+    }
+    
+    func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
+      let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
+      let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
+      return Array(indexPathsIntersection)
+    }
+
 }
