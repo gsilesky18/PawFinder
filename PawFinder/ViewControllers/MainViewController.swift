@@ -24,21 +24,40 @@ class MainViewController: UIViewController {
         }
     }
     
+    var userDefaults: UserDefaults = UserDefaults.standard
+    var zipCode: String?
+    var animalType: AnimalType = AnimalType.dog
+    
     //Array of animals
     var animals: [Animal] = []
     var currentPage = 1
-    var currentCount = 0
     var totalPages = 1
     var totalAnimal = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Update UI to show loading indicator
-        tableView.isHidden = true
-        activityIndicator.startAnimating()
+        //Fetch the users animal type and zip code
+        fetchUserDefaults()
         //Initialize animal resource
         updateResource()
-    }  
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        aminalResource?.loadIfNeeded()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //Open setttings on first load
+        if zipCode?.isEmpty ?? true {
+            performSegue(withIdentifier: "segueToSettings", sender: nil)
+        }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     // MARK: - Navigation
 
@@ -48,6 +67,18 @@ class MainViewController: UIViewController {
             if let vc = segue.destination as? DetailTableViewController, let cell = sender as? AnimalTableViewCell {
                 //Pass selected animal to detail view controller
                 vc.animal = cell.animal
+            }
+        }
+    }
+    
+    @IBAction func unwindToMainViewController(_ sender: UIStoryboardSegue){
+        //If the users changed their settings then update the resource
+        if let vc = sender.source as? SettingsViewController, vc.isDirty {
+            fetchUserDefaults()
+            currentPage = 1
+            updateResource()
+            if tableView.numberOfRows(inSection: 0) > 0 {
+                tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
             }
         }
     }
@@ -98,50 +129,103 @@ extension MainViewController: ResourceObserver {
     
     //Observer for when the resource state changes
     func resourceChanged(_ resource: Resource, event: ResourceEvent) {
-        if case .newData = event {
-            if let response : GetAnimalsResponse = resource.typedContent() {
-                currentPage += 1
+        switch event {
+        case .error:
+            showAlertView(message: resource.latestError?.userMessage ?? "Networking Error")
+            hideLoadingIndicator()
+            break
+        case .requested,
+             .observerAdded:
+            if currentPage == 1{
+                showLoadingIndicator()
+            }
+            break
+        case .newData,
+             .notModified,
+             .requestCancelled:
+            hideLoadingIndicator()
+            break
+        }
+        
+        if resource.isUpToDate {
+            hideLoadingIndicator()
+        }
+        if let response : GetAnimalsResponse = resource.typedContent() {
+            if response.pagination.current_page == 1 {
+                animals = []
                 totalPages = response.pagination.total_pages
                 totalAnimal = response.pagination.total_count
-                animals.append(contentsOf: response.animals)
-                if response.pagination.current_page > 1 {
-                    //Get the section that was loaded
-                    let newIndexPathsToReload = calculateIndexPathsToReload(from: response.animals.count)
-                    //Check if cells are visible
-                    let indexPathsToReload = visibleIndexPathsToReload(intersecting: newIndexPathsToReload)
-                    tableView.reloadRows(at: indexPathsToReload, with: .automatic)
-                }else{
-                    //If first page then reload table view
-                    tableView.isHidden = false
-                    activityIndicator.stopAnimating()
-                    tableView.reloadData()
-                }
+            }
+            currentPage = response.pagination.current_page + 1
+            animals.append(contentsOf: response.animals)
+            if response.pagination.current_page > 1 {
+                //Get the section that was loaded
+                let newIndexPathsToReload = calculateIndexPathsToReload(from: response.animals.count)
+                //Check if cells are visible
+                let indexPathsToReload = visibleIndexPathsToReload(intersecting: newIndexPathsToReload)
+                tableView.reloadRows(at: indexPathsToReload, with: .automatic)
+            }else{
+                //If first page then reload table view
+                tableView.reloadData()
             }
         }
-
     }
 }
 
 // MARK: - Private Methods
 private extension MainViewController {
+    //Check to see if the cell is outside of the current count of animals
     func isLoadingCell(for indexPath: IndexPath) -> Bool{
         return indexPath.row >= animals.count
     }
     
     func updateResource(){
-        aminalResource = PetFinderApi.sharedInstance.getAnimals(type: "dog", zip: 55437, page: currentPage)
+        if let zipCode = zipCode, !zipCode.isEmpty {
+            aminalResource = PetFinderApi.sharedInstance.getAnimals(type: animalType, zipCode: zipCode, page: currentPage)
+        }
     }
     
+    //Takes the total count of animals minus the last response from the server to calculate what cells need to be updated
     func calculateIndexPathsToReload(from count: Int) -> [IndexPath] {
       let startIndex = animals.count - count
       let endIndex = startIndex + count
       return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
     }
     
+    //Check to if the cells that need to be reloaded are visible
     func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
       let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
       let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
       return Array(indexPathsIntersection)
+    }
+    
+    func showLoadingIndicator(){
+        tableView.isHidden = true
+        activityIndicator.startAnimating()
+    }
+    
+    func hideLoadingIndicator() {
+        tableView.isHidden = false
+        activityIndicator.stopAnimating()
+    }
+    
+    //Store user defaults in variable so we don't have to fetch them on ever new page load
+    //Impoves performace
+    func fetchUserDefaults(){
+        if let type = userDefaults.string(forKey: "type"), !type.isEmpty, let animalType = AnimalType(rawValue: type) {
+            self.animalType = animalType
+        }
+        if let zipCode = userDefaults.string(forKey: "zipCode"), !zipCode.isEmpty {
+            self.zipCode = zipCode
+        }
+        
+    }
+    
+    func showAlertView(message: String){
+        let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+
     }
 
 }

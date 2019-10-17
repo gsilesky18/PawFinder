@@ -22,7 +22,7 @@ class PetFinderApi: Service {
     
     fileprivate init(){
         #if DEBUG
-        //SiestaLog.Category.enabled = .common
+        SiestaLog.Category.enabled = .common
         #endif
         //Siesta init
         super.init(baseURL: "https://api.petfinder.com/v2", standardTransformers: [.text, .image])
@@ -90,9 +90,8 @@ class PetFinderApi: Service {
     /// Get resource for adoptable animals
     ///
     /// - Returns: Resource to load data
-    func getAnimals(type: String, zip: Int, page: Int) -> Resource {
-        return resource("/animals").withParam("type", type).withParam("location", String(zip)).withParam("page", String(page))
+    func getAnimals(type: AnimalType, zipCode: String, page: Int) -> Resource {
+        return resource("/animals").withParam("type", type.rawValue).withParam("location", zipCode).withParam("page", String(page)).withParam("distance", "25")
     }
-    
 }
 
