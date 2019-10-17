@@ -12,13 +12,13 @@
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="MU7-gQ-5Yf" customClass="SettingsViewController" customModule="Paw_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ztu-eZ-zD1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gid-43-wm0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AEM-cC-iwb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6a-Qm-YUc">
@@ -30,9 +30,9 @@
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="search" textContentType="postal-code"/>
                                         </textField>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFJ-Ha-WJz">
-                                            <rect key="frame" x="0.0" y="90" width="414" height="752"/>
+                                            <rect key="frame" x="0.0" y="90" width="414" height="806"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dN0-R3-iRL">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="806"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e6I-mQ-ERU">
@@ -212,7 +212,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="1nc-ZZ-7dg"/>
                         <barButtonItem key="rightBarButtonItem" title="Settings" image="Settings" id="wJ3-hL-bNA">
                             <connections>
-                                <segue destination="MU7-gQ-5Yf" kind="presentation" identifier="segueToSettings" id="9im-uZ-jaM"/>
+                                <segue destination="MU7-gQ-5Yf" kind="presentation" identifier="segueToSettings" modalPresentationStyle="overFullScreen" id="9im-uZ-jaM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
