@@ -22,10 +22,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when view loads"){
                 it("should set title and label to animals name"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogChina", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogChina")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -35,10 +32,7 @@ class DetailTableViewControllerSpec: QuickSpec {
                 
                 it("should set age and breed of the animal"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogChina", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogChina")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -47,10 +41,7 @@ class DetailTableViewControllerSpec: QuickSpec {
                 
                 it("should set physical characteristics"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogChina", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogChina")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -63,10 +54,7 @@ class DetailTableViewControllerSpec: QuickSpec {
                 
                 it("should set health information"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogChina", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogChina")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -77,10 +65,7 @@ class DetailTableViewControllerSpec: QuickSpec {
                 
                 it("should set behavioral characteristics"){
                     //Arrange
-                     let url = Bundle(for: type(of: self)).url(forResource: "DogChina", withExtension: "json")!
-                     let data = try! Data(contentsOf: url)
-                     let jsonDecoder = JSONDecoder()
-                     viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogChina")
                      //Act
                      let _ = viewController.view
                      //Assert
@@ -94,10 +79,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when photo of animal is available"){
                 it("should begin loading image"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogChina", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogChina")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -109,10 +91,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when no photo is avaiable"){
                 it("should hide image"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogKota", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogKota")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -124,10 +103,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when breed is unkonwn"){
                 it("should hide the breed section"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogUnknownBreed", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogUnknownBreed")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -140,10 +116,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when breed is mixed"){
                 it("should display primary and secondary breeds"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogKota", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogKota")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -156,10 +129,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when purebred breed"){
                 it("should display primary breed"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogChina", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogChina")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -172,10 +142,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when coat is available"){
                 it("should display coat in physical characteristics"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogKota", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogKota")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -187,10 +154,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when good with kids is unavailable"){
                 it("should hide good with kids attribute"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogUnknownBreed", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogUnknownBreed")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -202,10 +166,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when email is available but no phone number"){
                 it("should show email"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogKota", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogKota")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -218,10 +179,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when phone is available but no email"){
                 it("should show phone"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogChina", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogChina")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -234,10 +192,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when email and phone is available"){
                 it("should show email and phone"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogUnknownBreed", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogUnknownBreed")
                     //Act
                     let _ = viewController.view
                     //Assert
@@ -250,10 +205,7 @@ class DetailTableViewControllerSpec: QuickSpec {
             context("when email and phone are not available"){
                 it("should hide contact section"){
                     //Arrange
-                    let url = Bundle(for: type(of: self)).url(forResource: "DogMartina", withExtension: "json")!
-                    let data = try! Data(contentsOf: url)
-                    let jsonDecoder = JSONDecoder()
-                    viewController.animal = try! jsonDecoder.decode(Animal.self, from: data)
+                    viewController.animal = DecoderHelper.sharedInstance.GetAnimal(from: "DogMartina")
                     //Act
                     let _ = viewController.view
                     //Assert
