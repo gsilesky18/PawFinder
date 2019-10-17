@@ -15,6 +15,11 @@
 		D721494E23512EC3002EE87F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D721494D23512EC3002EE87F /* Assets.xcassets */; };
 		D721495123512EC3002EE87F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D721494F23512EC3002EE87F /* LaunchScreen.storyboard */; };
 		D721496723512EC3002EE87F /* PawFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721496623512EC3002EE87F /* PawFinderUITests.swift */; };
+		D785B5BF23567D1200F766A6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D785B5BE23567D1200F766A6 /* SettingsViewController.swift */; };
+		D785B5C12356873300F766A6 /* SettingsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D785B5C02356873300F766A6 /* SettingsViewControllerSpec.swift */; };
+		D785B5C62357FE5300F766A6 /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D785B5C52357FE5300F766A6 /* MockUserDefaults.swift */; };
+		D785B5CA23591A2300F766A6 /* DecoderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D785B5C923591A2300F766A6 /* DecoderHelper.swift */; };
+		D785B5CC23591BD700F766A6 /* AnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D785B5CB23591BD700F766A6 /* AnimalType.swift */; };
 		D7904EC22351360900FA2A2C /* PetFinderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7904EC12351360900FA2A2C /* PetFinderApi.swift */; };
 		D7904EC52351504000FA2A2C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7904EC42351504000FA2A2C /* MainViewController.swift */; };
 		D7904ECA23515C4D00FA2A2C /* AccessTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7904EC923515C4D00FA2A2C /* AccessTokenResponse.swift */; };
@@ -68,6 +73,11 @@
 		D721496223512EC3002EE87F /* PawFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D721496623512EC3002EE87F /* PawFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawFinderUITests.swift; sourceTree = "<group>"; };
 		D721496823512EC3002EE87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D785B5BE23567D1200F766A6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D785B5C02356873300F766A6 /* SettingsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerSpec.swift; sourceTree = "<group>"; };
+		D785B5C52357FE5300F766A6 /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
+		D785B5C923591A2300F766A6 /* DecoderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderHelper.swift; sourceTree = "<group>"; };
+		D785B5CB23591BD700F766A6 /* AnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalType.swift; sourceTree = "<group>"; };
 		D7904EC12351360900FA2A2C /* PetFinderApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderApi.swift; sourceTree = "<group>"; };
 		D7904EC42351504000FA2A2C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D7904EC923515C4D00FA2A2C /* AccessTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenResponse.swift; sourceTree = "<group>"; };
@@ -161,6 +171,7 @@
 		D721494323512EC1002EE87F /* PawFinder */ = {
 			isa = PBXGroup;
 			children = (
+				D785B5BD2356791D00F766A6 /* Extensions */,
 				D721494423512EC1002EE87F /* AppDelegate.swift */,
 				D721494D23512EC3002EE87F /* Assets.xcassets */,
 				D721495223512EC3002EE87F /* Info.plist */,
@@ -177,9 +188,11 @@
 		D721495A23512EC3002EE87F /* PawFinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				D785B5C42357FE3A00F766A6 /* Mocks */,
 				D7904ED123524C1300FA2A2C /* Data */,
 				D7904ED023524B0200FA2A2C /* ViewControllerSpecs */,
 				D721495D23512EC3002EE87F /* Info.plist */,
+				D785B5C923591A2300F766A6 /* DecoderHelper.swift */,
 			);
 			path = PawFinderTests;
 			sourceTree = "<group>";
@@ -191,6 +204,21 @@
 				D721496823512EC3002EE87F /* Info.plist */,
 			);
 			path = PawFinderUITests;
+			sourceTree = "<group>";
+		};
+		D785B5BD2356791D00F766A6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D785B5C42357FE3A00F766A6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D785B5C52357FE5300F766A6 /* MockUserDefaults.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		D7904EC0235135D200FA2A2C /* Services */ = {
@@ -207,6 +235,7 @@
 				D7904ECD235240EF00FA2A2C /* Cells */,
 				D7904EDB2353722E00FA2A2C /* DetailTableViewController.swift */,
 				D7904EC42351504000FA2A2C /* MainViewController.swift */,
+				D785B5BE23567D1200F766A6 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +245,7 @@
 			children = (
 				D7904EC923515C4D00FA2A2C /* AccessTokenResponse.swift */,
 				D7904ECB23515DB900FA2A2C /* GetAnimalsResponse.swift */,
+				D785B5CB23591BD700F766A6 /* AnimalType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +263,7 @@
 			children = (
 				D7904ED923524ECE00FA2A2C /* MainViewControllerSpec.swift */,
 				D7904EDD235379C600FA2A2C /* DetailTableViewControllerSpec.swift */,
+				D785B5C02356873300F766A6 /* SettingsViewControllerSpec.swift */,
 			);
 			path = ViewControllerSpecs;
 			sourceTree = "<group>";
@@ -515,6 +546,8 @@
 				D721494523512EC1002EE87F /* AppDelegate.swift in Sources */,
 				D721494723512EC1002EE87F /* SceneDelegate.swift in Sources */,
 				D7904EC52351504000FA2A2C /* MainViewController.swift in Sources */,
+				D785B5BF23567D1200F766A6 /* SettingsViewController.swift in Sources */,
+				D785B5CC23591BD700F766A6 /* AnimalType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +557,9 @@
 			files = (
 				D7904EDA23524ECE00FA2A2C /* MainViewControllerSpec.swift in Sources */,
 				D7904EDE235379C600FA2A2C /* DetailTableViewControllerSpec.swift in Sources */,
+				D785B5C62357FE5300F766A6 /* MockUserDefaults.swift in Sources */,
+				D785B5CA23591A2300F766A6 /* DecoderHelper.swift in Sources */,
+				D785B5C12356873300F766A6 /* SettingsViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KE92YR9WD;
 				INFOPLIST_FILE = PawFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -711,6 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KE92YR9WD;
 				INFOPLIST_FILE = PawFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
