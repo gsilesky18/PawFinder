@@ -171,7 +171,6 @@
 		D721494323512EC1002EE87F /* PawFinder */ = {
 			isa = PBXGroup;
 			children = (
-				D785B5BD2356791D00F766A6 /* Extensions */,
 				D721494423512EC1002EE87F /* AppDelegate.swift */,
 				D721494D23512EC3002EE87F /* Assets.xcassets */,
 				D721495223512EC3002EE87F /* Info.plist */,
@@ -204,13 +203,6 @@
 				D721496823512EC3002EE87F /* Info.plist */,
 			);
 			path = PawFinderUITests;
-			sourceTree = "<group>";
-		};
-		D785B5BD2356791D00F766A6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D785B5C42357FE3A00F766A6 /* Mocks */ = {
@@ -736,7 +728,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanysocksapps.PawFinder;
 				PRODUCT_NAME = "Paw Finder";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -756,7 +748,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanysocksapps.PawFinder;
 				PRODUCT_NAME = "Paw Finder";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
