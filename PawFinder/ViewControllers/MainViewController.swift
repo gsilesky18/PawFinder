@@ -192,7 +192,7 @@ private extension MainViewController {
       return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
     }
     
-    //Check to if the cells that need to be reloaded are visible
+    //Check to see if the cells that need to be reloaded are visible
     func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
       let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
       let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
