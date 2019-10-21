@@ -82,6 +82,20 @@ class MainViewController: UIViewController {
             }
         }
     }
+    
+    //Takes the total count of animals minus the last response from the server to calculate what cells need to be updated
+    func calculateIndexPathsToReload(from count: Int) -> [IndexPath] {
+      let startIndex = animals.count - count
+      let endIndex = startIndex + count
+      return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
+    }
+    
+    //Check to see if the cells that need to be reloaded are visible
+    func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
+      let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
+      let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
+      return Array(indexPathsIntersection)
+    }
 
 }
 
@@ -183,20 +197,6 @@ private extension MainViewController {
         if let zipCode = zipCode, !zipCode.isEmpty {
             aminalResource = PetFinderApi.sharedInstance.getAnimals(type: animalType, zipCode: zipCode, page: currentPage)
         }
-    }
-    
-    //Takes the total count of animals minus the last response from the server to calculate what cells need to be updated
-    func calculateIndexPathsToReload(from count: Int) -> [IndexPath] {
-      let startIndex = animals.count - count
-      let endIndex = startIndex + count
-      return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
-    }
-    
-    //Check to see if the cells that need to be reloaded are visible
-    func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
-      let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
-      let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
-      return Array(indexPathsIntersection)
     }
     
     func showLoadingIndicator(){
