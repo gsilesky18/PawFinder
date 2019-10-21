@@ -25,7 +25,7 @@ class SettingsViewControllerSpec: QuickSpec {
             }
             
             context("when animal type changed to dog"){
-                it("should change the user defualts"){
+                it("should change the user defaults"){
                     //Arrange
                     let mockUserDefaults =  MockUserDefaults()
                     viewController.userDefaults = mockUserDefaults
@@ -39,7 +39,7 @@ class SettingsViewControllerSpec: QuickSpec {
             }
             
             context("when animal type changed to cat"){
-                it("should change the user defualts"){
+                it("should change the user defaults"){
                     //Arrange
                     let mockUserDefaults = MockUserDefaults()
                     viewController.userDefaults = mockUserDefaults
@@ -53,7 +53,7 @@ class SettingsViewControllerSpec: QuickSpec {
             }
             
             context("when nothing is entered in the zip code field"){
-                it("should display alert message"){
+                it("should display alert view"){
                     //Arrange
                     viewController.zipCodeTextField.text = nil
                     //Act
@@ -64,7 +64,7 @@ class SettingsViewControllerSpec: QuickSpec {
             }
             
             context("when zip code is less than 5 digits"){
-                it("should not be a valid zip code"){
+                it("should display alert view"){
                     //Arrange
                     viewController.zipCodeTextField.text = "5552"
                     //Act
@@ -75,7 +75,7 @@ class SettingsViewControllerSpec: QuickSpec {
             }
             
             context("when zip code is more than 5 digits"){
-                it("should not be a valid zip code"){
+                it("should display alert view"){
                     //Arrange
                     viewController.zipCodeTextField.text = "555234"
                     //Act
@@ -86,7 +86,7 @@ class SettingsViewControllerSpec: QuickSpec {
             }
             
             context("when zip code is 5 digits"){
-                it("should be a valid zip code"){
+                it("should save the zip code in user defaults"){
                     //Arrange
                     let mockUserDefaults = MockUserDefaults()
                     viewController.userDefaults = mockUserDefaults
@@ -96,6 +96,19 @@ class SettingsViewControllerSpec: QuickSpec {
                     //Assert
                     expect(mockUserDefaults.zipCodeChanged).toEventually(beTrue())
                     expect(viewController.isDirty).toEventually(beTrue())
+                }
+            }
+            
+            context("when trying to dismiss view when no zip code is saved"){
+                it("should display alert view"){
+                    //Arrange
+                    let mockUserDefaults = MockUserDefaults()
+                    mockUserDefaults.zipCode = ""
+                    viewController.userDefaults = mockUserDefaults
+                    //Act
+                    viewController.dismissViewController()
+                    //Assert
+                    expect(viewController.presentedViewController).toEventually(beAKindOf(UIAlertController.self))
                 }
             }
         }

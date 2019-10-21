@@ -66,6 +66,16 @@ class SettingsViewController: UIViewController {
             showAlertView(message: "Please enter a 5 digit zip code.")
         }
     }
+    
+    @objc func dismissViewController() {
+        //Force user to enter a zip code
+        //PetFinder Api is very slow without a zip code
+        if let zipCode = userDefaults.string(forKey: "zipCode"), !zipCode.isEmpty {
+            performSegue(withIdentifier: "unwindToMainViewController", sender: nil)
+        }else{
+            showAlertView(message: "Please search for a zip code before closing.")
+        }
+    }
 }
 
 // MARK: - Private Methods
@@ -83,15 +93,5 @@ private extension SettingsViewController {
             return true
         }
         return false
-    }
-    
-    @objc func dismissViewController() {
-        //Force user to enter a zip code
-        //PetFinder Api is very slow without a zip code
-        if let zipCode = userDefaults.string(forKey: "zipCode"), !zipCode.isEmpty {
-            performSegue(withIdentifier: "unwindToMainViewController", sender: nil)
-        }else{
-            showAlertView(message: "Please search for a zip code before closing.")
-        }
     }
 }
